@@ -1,0 +1,57 @@
+.mood-tracker {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.mood-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.mood-item {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  text-align: center;
+}
+
+.mood-item:hover {
+  transform: scale(1.05);
+}
+
+.mood-selected {
+  text-align: center;
+}
+
+.mood-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.mood-header h2 {
+  font-family: var(--font-playfair);
+  font-size: 1.5rem;
+  color: #1a1a1a;
+}
+
+.mood-message {
+  color: #666;
+  margin: 1rem 0;
+}
+
+.mood-button {
+  padding: 0.5rem 1rem;
+  background-color: #f3f4f6;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.mood-button:hover {
+  background-color: #e5e7eb;
+  transform: translateY(-1px);
+}

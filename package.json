@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "fabric-pure-browser": "^5.1.0",
+    "react-calendar": "^5.1.0"
+  }
+}

@@ -1,1 +1,3 @@
-# medp341-final
+# MEDP 341 Final Project
+
+# Link to the project:

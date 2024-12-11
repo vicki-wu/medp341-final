@@ -1,0 +1,87 @@
+.habit-tracker {
+  width: 100%;
+  overflow-x: auto;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+.habit-grid {
+  display: grid;
+  grid-template-columns: 150px repeat(7, 1fr);
+  gap: 1px;
+  background-color: #eee;
+  margin-bottom: 1px;
+  min-width: min-content;
+}
+
+.habit-cell {
+  background-color: white;
+  padding: 0.75rem;
+  text-align: center;
+  min-width: 60px;
+}
+
+.header-cell {
+  font-weight: 500;
+  background-color: #f8f8f8;
+}
+
+.checkbox-cell {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: #3b82f6;
+}
+
+.checkbox-cell:hover {
+  background-color: #f0f9ff;
+}
+
+.checkbox-cell.completed {
+  background-color: #e0f2fe;
+}
+
+.habit-cell:first-child {
+  text-align: left;
+  font-weight: 500;
+}
+
+input.habit-cell {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 0.75rem;
+}
+
+input.habit-cell:focus {
+  background-color: #f0f9ff;
+}
+
+.habit-name {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.delete-habit-btn {
+  background: none;
+  border: none;
+  color: #ef4444;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0 4px;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.habit-name:hover .delete-habit-btn {
+  opacity: 1;
+}
+
+.delete-habit-btn:hover {
+  color: #dc2626;
+}

@@ -1,11 +1,16 @@
 {
   "dependencies": {
     "fabric-pure-browser": "^5.1.0",
+    "next": "^15.1.0",
+    "react": "^19.0.0",
     "react-calendar": "^5.1.0",
+    "react-dom": "^19.0.0",
     "serve": "^14.2.1"
   },
   "scripts": {
     "start": "cd bullet-journal && npx serve -s build",
-    "dev": "cd bullet-journal && next dev"
+    "dev": "cd bullet-journal && next dev",
+    "build": "cd bullet-journal && next build",
+    "export": "cd bullet-journal && next export"
   }
 }

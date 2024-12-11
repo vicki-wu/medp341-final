@@ -1,6 +1,11 @@
 {
   "dependencies": {
     "fabric-pure-browser": "^5.1.0",
-    "react-calendar": "^5.1.0"
+    "react-calendar": "^5.1.0",
+    "serve": "^14.2.1"
+  },
+  "scripts": {
+    "start": "cd bullet-journal && npx serve -s build",
+    "dev": "cd bullet-journal && next dev"
   }
 }

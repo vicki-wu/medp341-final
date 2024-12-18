@@ -12,6 +12,7 @@ export default function Goals() {
   const [isAdding, setIsAdding] = useState(false);
 
   useEffect(() => {
+    // Loads stored goals from localStorage on component mount
     const storedGoals = localStorage.getItem("userGoals");
     if (storedGoals) {
       setGoals(JSON.parse(storedGoals));
@@ -19,12 +20,14 @@ export default function Goals() {
   }, []);
 
   const saveGoals = (updatedGoals) => {
+    // Saves updated goals to localStorage and updates state
     localStorage.setItem("userGoals", JSON.stringify(updatedGoals));
     setGoals(updatedGoals);
   };
 
   const addGoal = (e) => {
     e.preventDefault();
+    // Adds a new goal to the active category if input is not empty
     if (newGoal.trim()) {
       const updatedGoals = {
         ...goals,
@@ -44,6 +47,7 @@ export default function Goals() {
   };
 
   const toggleGoal = (category, index) => {
+    // Toggles the completion status of a goal
     const updatedGoals = {
       ...goals,
       [category]: goals[category].map((goal, i) =>
@@ -54,6 +58,7 @@ export default function Goals() {
   };
 
   const deleteGoal = (category, index) => {
+    // Deletes a goal from the specified category
     const updatedGoals = {
       ...goals,
       [category]: goals[category].filter((_, i) => i !== index),
@@ -71,7 +76,7 @@ export default function Goals() {
     <div className="goals-container">
       <div className="goals-section">
         {Object.entries(categories).map(([key, { name, icon }]) => (
-          <div key={key} className="goals-category">
+          <div key={key} className="goals-category" data-category={key}>
             <div className="goals-header">
               <h2>
                 <span className="goals-nav-icon">{icon}</span>
@@ -80,6 +85,7 @@ export default function Goals() {
               <button
                 className="add-goal-btn"
                 onClick={() => {
+                  // Sets the active category and opens the goal input form
                   setActiveCategory(key);
                   setIsAdding(true);
                 }}

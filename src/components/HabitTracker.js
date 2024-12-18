@@ -8,6 +8,7 @@ export default function HabitTracker() {
 
   // Get current week dates
   const getCurrentWeekDates = () => {
+    // Generates an array of dates for the current week
     const today = new Date();
     const dates = [];
     for (let i = 0; i < 7; i++) {
@@ -20,6 +21,7 @@ export default function HabitTracker() {
 
   // Load habits from localStorage
   useEffect(() => {
+    // Retrieves stored habits from localStorage on component mount
     const storedHabits = localStorage.getItem("habits");
     if (storedHabits) {
       setHabits(JSON.parse(storedHabits));
@@ -28,17 +30,20 @@ export default function HabitTracker() {
 
   // Save habits to localStorage
   const saveHabits = (updatedHabits) => {
+    // Saves updated habits to localStorage and updates state
     localStorage.setItem("habits", JSON.stringify(updatedHabits));
     setHabits(updatedHabits);
   };
 
   const addHabit = (e) => {
+    // Adds a new habit if the Enter key is pressed or input is blurred
     if (e?.key && e.key !== "Enter") return;
 
     if (newHabit.trim()) {
       const weekDates = getCurrentWeekDates();
       const completionStatus = {};
       weekDates.forEach((date) => {
+        // Initializes completion status for each date in the week
         completionStatus[date.toISOString().split("T")[0]] = false;
       });
 
@@ -54,6 +59,7 @@ export default function HabitTracker() {
   };
 
   const toggleHabitCompletion = (habitIndex, dateStr) => {
+    // Toggles the completion status of a habit for a specific date
     const updatedHabits = habits.map((habit, index) => {
       if (index === habitIndex) {
         return {
@@ -70,6 +76,7 @@ export default function HabitTracker() {
   };
 
   const deleteHabit = (habitIndex) => {
+    // Deletes a habit from the list
     const updatedHabits = habits.filter((_, index) => index !== habitIndex);
     saveHabits(updatedHabits);
   };

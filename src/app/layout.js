@@ -13,7 +13,10 @@ const playfair = Playfair_Display({
 });
 
 export const metadata = {
-  title: "Bullet Journal",
+  title: "Bulletry",
+  icons: {
+    icon: "/notebook.png",
+  },
 };
 
 export default function RootLayout({ children }) {

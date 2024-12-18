@@ -88,15 +88,20 @@
     border-right: none;
     border-bottom: 1px solid #e5e7eb;
     padding: 1rem;
+    height: auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  .sidebar-brand {
+    padding: 1rem;
   }
 
   .sidebar-nav {
-    flex-direction: row;
-    overflow-x: auto;
-    padding-bottom: 0.5rem;
+    padding: 1rem;
   }
 
   .sidebar-item {
-    white-space: nowrap;
+    justify-content: flex-start;
   }
 }

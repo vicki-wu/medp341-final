@@ -48,3 +48,9 @@
 .brush-opacity input[type="range"] {
   width: 8rem;
 }
+
+@media (max-width: 768px) {
+  .controls {
+    flex-direction: column;
+  }
+}

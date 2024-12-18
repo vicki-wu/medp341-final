@@ -189,3 +189,9 @@
   font-size: 2rem;
   margin-bottom: 1.5rem;
 }
+
+@media (max-width: 768px) {
+  .goals-section {
+    grid-template-columns: 1fr;
+  }
+}

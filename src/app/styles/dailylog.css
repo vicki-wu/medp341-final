@@ -160,7 +160,7 @@
 
 .journal-entry {
   width: 90%;
-  max-width: 90%;
+  max-width: 600px;
   min-height: 550px;
   padding: 0;
   border: 1px solid #ddd;
@@ -176,7 +176,7 @@
   box-sizing: border-box;
   background-position: 0 32px;
   background-attachment: local;
-  margin-left: 50px;
+  margin: 0 auto;
 }
 
 .journal-entry:focus {
@@ -200,4 +200,18 @@
 
 .save-button:hover {
   background-color: #357abd;
+}
+
+@media (max-width: 768px) {
+  .daily-log-container {
+    grid-template-columns: 1fr;
+    height: auto;
+    overflow-y: auto;
+  }
+
+  .journal-entry {
+    width: 95%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
 }

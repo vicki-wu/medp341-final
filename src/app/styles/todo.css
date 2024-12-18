@@ -104,3 +104,9 @@
 .todo-item span.completed {
   color: #9ca3af;
 }
+
+@media (max-width: 768px) {
+  .todo-section {
+    padding: 1rem;
+  }
+}

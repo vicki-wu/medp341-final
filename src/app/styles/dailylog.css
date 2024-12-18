@@ -160,7 +160,7 @@
 
 .journal-entry {
   width: 90%;
-  max-width: 600px;
+  max-width: 90%;
   min-height: 550px;
   padding: 0;
   border: 1px solid #ddd;
@@ -176,7 +176,7 @@
   box-sizing: border-box;
   background-position: 0 32px;
   background-attachment: local;
-  margin: 0 auto;
+  margin-left: 50px;
 }
 
 .journal-entry:focus {
